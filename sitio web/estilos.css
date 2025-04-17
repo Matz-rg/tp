@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8fbfd;
+    color: #14365c;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #e3f0ff;
+    border-bottom: 3px solid #1976d2;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px 0 rgba(25, 118, 210, 0.07);
+    position: relative;
+}
+
+.datos-header {
+    background: #e3f0ff;
+    border-bottom: 3px solid #1976d2;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px 0 rgba(25, 118, 210, 0.07);
+    position: relative;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.header-flex a {
+    margin-right: auto;
+    margin-left: 18px;
+    position: static;
+    transform: none;
+}
+.header-flex h2 {
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+}
+
+.header-datos-link {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1976d2;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.45em 1.2em;
+    border: 2px solid #1976d2;
+    border-radius: 0;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    box-shadow: 0 1px 8px 0 rgba(25, 118, 210, 0.09);
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    cursor: pointer;
+}
+.header-datos-link:hover, .header-datos-link:focus {
+    background: #fff;
+    color: #1976d2;
+    border-color: #1976d2;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.2rem;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 0.5em 1.3em;
+    background: #e6f0fa;
+    color: #1976d2;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    border: 2px solid #1976d2;
+    letter-spacing: 0.5px;
+}
+nav ul li a:hover, nav ul li a:focus {
+    background: #1976d2;
+    color: #fff;
+    border-color: #14365c;
+}
+
+main {
+    max-width: 900px;
+    width: 96vw;
+    margin: 100px auto 0 auto;
+    background: #fff;
+    border-radius: 0;
+    border: 2px solid #1976d2;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+    flex: 1 0 auto;
+}
+
+h1, h2, h3 {
+    color: #14365c;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: tituloFadeInUp 1s cubic-bezier(.25,.8,.25,1) forwards;
+}
+
+@keyframes tituloFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h1 {
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+}
+
+section {
+    margin-bottom: 1.2em;
+    border-left: 4px solid #1976d2;
+    border-radius: 0;
+    background: #f4faff;
+    padding-left: 1.3em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    background: #f8fbfd;
+    border-radius: 0;
+    border: 2px solid #1976d2;
+    padding: 1.5em 2em 1.5em 2em;
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 0 auto;
+}
+form label {
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 0.3em;
+    display: block;
+}
+form input, form textarea {
+    font-family: inherit;
+    padding: 0.6em 1em;
+    border: 1.5px solid #b4d2f7;
+    border-radius: 7px;
+    font-size: 1em;
+    background: #fff;
+    color: #14365c;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+form input:focus, form textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+form button[type="submit"] {
+    background: #1976d2;
+    color: #fff;
+    border: 2px solid #1976d2;
+    border-radius: 0;
+    padding: 0.7em 2em;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    margin-top: 0.3em;
+}
+form button[type="submit"]:hover, form button[type="submit"]:focus {
+    background: #1565c0;
+    transform: translateY(-2px) scale(1.02);
+}
+
+article, .card, .usuario-bloque {
+    background: #f8fbfd;
+    border-radius: 0;
+    border: 2px solid #1976d2;
+    padding: 1.5em 2em;
+    margin-bottom: 1.2em;
+    box-shadow: 0 2px 8px 0 rgba(25, 118, 210, 0.06);
+}
+
+.usuario-titulo {
+    font-size: 1.1rem;
+    color: #1976d2;
+    margin-bottom: 0.7em;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.usuario-datos {
+    color: #14365c;
+    font-size: 1em;
+    line-height: 1.6;
+}
+.paginacion-usuarios {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1.5em;
+}
+.paginacion-usuarios button {
+    background: #e3f0ff;
+    color: #1976d2;
+    border: 1.5px solid #1976d2;
+    border-radius: 0;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+}
+.paginacion-usuarios button.pagina-activa, .paginacion-usuarios button:hover {
+    background: #1976d2;
+    color: #fff;
+    border-color: #1976d2;
+}
+
+
+address {
+    color: #14365c;
+    font-style: normal;
+    margin: 1.5em 0 0.5em 0;
+    text-align: center;
+}
+
+footer {
+    background: #e3f0ff;
+    color: #1976d2;
+    border-top: 3px solid #1976d2;
+    border-radius: 0;
+    box-shadow: 0 -2px 12px 0 rgba(25, 118, 210, 0.07);
+    padding: 1.2em 0 1em 0;
+    margin-top: 2.5rem;
+    font-size: 1em;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1000px) {
+    main {
+        max-width: 99vw;
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+    }
+    form {
+        padding: 1.2em 0.5em 1.2em 0.5em;
+    }
+    article, .card {
+        padding: 1.2em 0.7em;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        height: 54px;
+    }
+    nav ul {
+        gap: 0.5rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    main {
+        margin-top: 70px;
+        padding: 0.6rem 0.1rem 0.6rem 0.1rem;
+    }
+    form {
+        padding: 0.8em 0.1em 0.8em 0.1em;
+    }
+}
+
+#come-back {
+    background: #1976d2;
+    color: #fff;
+    border: 1.5px solid #1976d2;
+    border-radius: 0;
+    padding: 0.4em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+ 
+   
+}
+#come-back:hover, #come-back:focus {
+    background: #fff;
+    color: #1976d2;
+    border-color: #1976d2;
+}
+
